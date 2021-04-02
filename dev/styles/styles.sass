@@ -1,0 +1,175 @@
+@import "utils/libs"
+@import "utils/vars"
+@import "utils/mixins"
+@import "utils/fonts"
+@import "utils/sprite"
+@import "utils/base"
+
+  
+.container 
+  max-width: $desktop
+  width: 100% 
+  margin: 0 auto 
+  padding: 0 15px
+
+h1, .title1 
+  font-size: 60px
+  line-height: 60px
+  font-weight: 700
+  text-transform: uppercase
+
+h2, .title2
+  font-size: 30px
+  line-height: 1.2
+  font-weight: 700
+  text-transform: uppercase
+
+hr
+  +box(100%,1px)
+  background-color: $bg-white-100
+  margin: 20px 0
+
+hr.line-gold
+  height: 5px
+  background-color: $bg-gold
+  width: 80px
+  &_big
+    width: 160px
+    margin: 50px 0
+  &_small
+    +box(50px,3px)
+
+.check
+  +box(14px)
+  border: 1px solid $white-100
+  border-radius: 2px
+  display: block
+  background: $bg-white no-repeat center / 93%
+  margin-right: 10px
+
+.checkbox
+  display: none 
+  &:checked ~ .check
+    background-color: $bg-gold
+    border-color: $gold
+    background-image: url("../img/common/check.svg")
+
+.count-word
+  font-size: 12px
+  line-height: 1
+  font-weight: 400
+  color: $gray
+  margin-top: 8px
+  text-align: right
+
+.name
+  position: absolute 
+  left: 0 
+  top: 30px
+  font-size: 14px
+  pointer-events: none
+  line-height: 1
+  font-weight: 400
+  color: $gray
+  transition: all 0.3s ease
+  &-textarea 
+
+.icon-input
+  position: absolute
+  top: 0
+  right: 0
+  +box(20px,100%)
+  
+input, textarea
+  &:focus ~ .name, &:valid ~ .name
+    font-size: 12px
+    top: 15px 
+
+.max-726
+    max-width: 726px
+    margin: 0 auto
+// .select
+//   width: 100%
+//   background: #F5F5F5
+//   border-radius: 5px
+//   position: relative
+//   .icon-arrow-down
+//     margin-left: 5px
+//   &-normal 
+//     background-color: transparent
+//     width: fit-content
+//     .select-item
+//       padding: 0 
+//   &-item
+//     +d-flex(space-between, center)
+//     padding: 17px 20px
+//     font-size: 16px
+//     line-height: 165%
+//     cursor: pointer
+//     &.active 
+//       .icon-arrow-down
+//         transform: scaleY(-1)
+//   &-drop 
+//     position: absolute
+//     top: 100% 
+//     left: 0 
+//     background: #F5F5F5
+//     width: 100%
+//     padding: 7px 0
+//     display: none
+//     max-height: 150px
+//     overflow-y: auto
+//     z-index: 3
+//     width: max-content
+//   &-option 
+//     padding: 10px 20px
+//     cursor: pointer
+
+
+@import "modules/modules"
+
+// .w-100
+//   width: 100% 
+  
+// .hidden-xy
+//   overflow: hidden
+
+.relative
+  position: relative
+
+// .h-fit 
+//   height: fit-content
+
+// .w-fit-content 
+//   width: fit-content
+
+// .line-clamp
+//   display: block
+//   display: -webkit-box
+//   -webkit-box-orient: vertical
+//   position: relative
+//   font-size: 16px
+//   line-height: 26.4px
+//   overflow: hidden
+//   text-overflow: ellipsis
+
+// .line-clamp:after
+//   content: '...'
+//   text-align: center
+//   bottom: 0
+//   right: 0
+//   width: 25%
+//   display: block
+//   position: absolute
+//   height: calc(1em * 26.4px)
+//   color: $gray
+//   background: linear-gradient(to left, rgba(241, 242, 246, 0.1), rgba(241, 242, 246, 0.5) 75%)
+
+// @supports (-webkit-line-clamp: 2)
+//   .line-clamp:after
+//     display: none !important
+//   .line-clamp
+//     -webkit-line-clamp: 2
+//     height: calc(1em * 26.4px * 2)
+
+@import "utils/media"

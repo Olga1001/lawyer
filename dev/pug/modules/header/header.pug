@@ -1,0 +1,20 @@
+header.header
+    .container 
+        .flex-center-between
+            a.logo(href="#") 
+                img.logo-icon(src="img/logo/", alt="icon logo")
+                span.logo-name personal 
+                    span.d-block Lawyer
+
+                
+            nav.navmenu 
+                ul.menu 
+                    each val in ['Your Rights','How It Works ','FAQ','Reviews','Contact Us']
+                        li.menu-item 
+                            a.menu-link(href="#")=val
+            a.btn-phone(href="tel:2031234567") 
+                +icon("")
+                span 
+                    span.btn-phone_text CALL NOW
+                    span.btn-phone_number 203-123-4567
+

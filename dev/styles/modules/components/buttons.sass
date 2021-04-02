@@ -1,0 +1,46 @@
+.btn 
+    font-size: 20px
+    line-height: 28px
+    font-weight: 700
+    text-transform: uppercase
+    color: $white
+    background-color: $bg-gold
+    border-radius: 3px
+    line-height: 52px
+    border: 1px solid transparent
+    text-align: center
+    max-width: 280px 
+    width: 100%
+    display: block
+    position: relative
+    padding: 0 30px
+    svg 
+        +centerY
+        right: 20px
+        +box(20px)
+
+    &-phone
+        background-color: $bg-gold
+        border-radius: 3px
+        color: $white
+        display: flex 
+        align-items: center
+        padding: 8px 19px 7px
+        svg 
+            +box(21px)
+            margin-right: 15px
+        span 
+            display: block
+        &_text 
+            font-size: 15px
+            line-height: 1
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 0.3em
+            margin-bottom: 4px
+        &_number
+            font-size: 16px
+            line-height: 1
+            font-weight: 700
+            text-transform: uppercase
+            color: $white

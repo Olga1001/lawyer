@@ -1,0 +1,177 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+	-var filter = true
+
+block content
+	main.main
+		section.first 
+			include modules/header/header
+			.container.first-container
+				.flex-wrap 
+					.w-lg-50.first-left 
+						h1.title1.c-white.mb-15 harassed by  <br> creditors?
+						p.fs-26.c-white.text-up you could be entitled <br>  to compensation.
+						hr.line-gold.line-gold_big
+						.d-flex.pt-15 
+							+icon("", "c-gold mr-20")
+							.text-up 
+								p.fw-bold.fs-26.c-white.mb-15 call for free <br> legal advice now:
+								p.fw-bold.fs-40.c-gold 800-604-0466
+					.w-lg-50 
+						.forms 
+							.d-flex
+								button.tab.active(type="button") STEP 
+									span 01
+								button.tab(type="button") STEP 
+									span 02
+							.forms-content 
+								.form.active 
+									.form-container
+										p.fs-30.fw-bold.text-up.mb-10 eceive a
+											span.d-block.c-gold 100% FREE
+											span.d-block.c-gold legal consultation
+										p.fs-20.fw-bold Has a debt collector done any of the following?
+										hr
+										each val in ['Has a debt collector done any of the following?','Threatened to sue you or garnish wages?','Asked you to pay more than owed or added interest/fees?','Told a third party about the debt?','Failed to send you anything in the mail?','Lied or threatened you?','Did anything else that you think is illegal or unfair?']
+											label.align-items-center.mb-15 
+												input.checkbox(type="checkbox")
+												span.check 
+												span=val
+										hr.mb-40
+										a.btn.mx-auto(href="#") Get Free Help
+											+icon("")
+
+								form.form
+									.form-container
+										p.fs-30.fw-bold.text-up.mb-10 Last step for your
+											span.d-block.c-gold FREE consultation
+										p.fs-20.fw-bold Please fill out your contact information.
+										.form-content
+											.relative.pt-11 
+												input(type="text" value="" required)
+												p.name Name
+												+icon("","icon-input")
+											.relative.pt-11  
+												input(type="text" value="" required)
+												p.name Phone
+												+icon("","icon-input")
+
+											.relative.pt-11 
+												input(type="email" value="" required)
+												p.name Email
+												+icon("","icon-input")
+
+											.relative.pt-11 
+												textarea(cols="5", rows="2" value="" required)
+												p.name.name-textarea Message
+												p.count-word 0/200
+											button.btn.mt-20.mx-auto(type="submit") Get Free Help
+									.form-bottom
+										p.c-gray.text-center Your information is confidential. We do not spam, or sell your info.
+		section.second 
+			.container 
+				h2.title2.text-center Your Rights
+				hr.line-gold.mx-auto
+				p.fs-20.fw-bold.text-center.py-10 You Are Protected By the FDCPA
+				.max-726
+					p.fs-16.text-justify The Fair Debt Collection Practices Act (FDCPA) was passed by congress in 1977 to protect innocent people like you from being abused through unfair debt collection practices. The Federal Trade Commission, which is the nation's largest and powerful consumer protection agency, enforces the Fair Debt Collection Practices Act, ensuring that debt collectors do not use abusive, unfair, or deceptive practices to collect debts.
+		section.third 
+			.container 
+				h2.title2.text-center Examples of <br> Illegal Harassment
+				hr.line-gold.mx-auto
+				.flex-wrap.items
+					each val in [{icon: '', text: 'Multiple calls per week'},{icon: '', text: 'Attempts to collect more than you owe'},{icon: '', text: 'Criminal accusations'},{icon: '', text: 'Early morning or late night calls'},{icon: '', text: 'Threats of negative credit reporting'},{icon: '', text: 'Collection agency lies'},{icon: '', text: 'Calls to friends, neighbors, or coworkers'},{icon: '', text: 'Collection calls at work'},{icon: '', text: 'Use of obscene language'},{icon: '', text: 'Threats of violence, lawsuit, or arrest'},{icon: '', text: 'Attempts to intimidate you'},{icon: '', text: 'Robocalls to your cell phone'}]
+						.item 
+							+icon(val.icon,"mx-auto")
+							hr.line-gold.line-gold_small.mx-auto
+							p.fw-bold.text-center=val.text
+		section.fourth 
+			.container 
+				h2.fs-35.text-center.fw-bold 
+					span.c-white YOU CAN FIGHT BACK
+					span.d-block.c-gold YOU SHOULD FIGHT BACK
+				hr.line-gold.mx-auto.my-25
+				p.fs-16.c-white.text-center.max-726 Get legal help with zero out-of-pocket expense because debt collectors have to pay your legal fees when they violate the law.
+
+				.flex-wrap 
+					- 
+						card = [
+							{
+								src: 'rectangle_12_copy_4406.jpg',
+								count: '01',
+								title: 'The Law Protects You',
+								text: ' The Fair Debt Collection Practices Act protects you from debt collector abuse. You can sue and recover up to $1,000.'
+							},
+							
+							{
+								src: 'rectangle_12_copy_4406.jpg',
+								count: '02',
+								title: 'Connect with a Lawyer',
+								text: 'Request a free evaluation of your case and ensure your rights are not further violated by predatory collection agencies.'
+							},
+							{
+								src: 'rectangle_12_copy_4406.jpg',
+								count: '03',
+								title: 'Rely on Our Experience',
+								text: 'We make it easy to exercise your rights. We’ll sue the debt collector on your behalf – at no upfront cost to you.'
+							}
+						]
+					each val in card
+						.card 
+							.relative
+								img(src="img/common/"+val.src, alt="img")
+								.count=val.count
+							.card-content 
+								p.fs-20.fw-bold.mb-10=val.title 
+								p.fs-16=val.text
+		section.fifth 
+			.container 
+				h2.fs-35.text-center QUESTIONS YOU<br> COULD BE ASKING 
+				hr.line-gold.mx-auto.my-25
+
+				.flex-wrap 
+					- 
+						faq = [
+							{
+								title: 'If I was harassed, how much money can I receive?',
+								text: 'You could receive up to $1000 per complaint.'
+							},
+							{
+								title: 'How much does it cost to speak with an attorney?',
+								text: 'We offer a 100% free case evaluation.'
+							},
+							{
+								title: 'Who is subject to the Fair Debt Collection Practices Act?',
+								text: 'The FDCPA applies to debt collector and not original creditors.'
+							},
+							{
+								title: 'Do you have a lot of experience in this practice?',
+								text: 'We’ve helped thousands of clients just like you turn the tables on debt collectors. We make them pay you.'
+							}
+						]
+					each val in faq
+						.card-faq 
+							.card-faq_l 
+								.card-faq_b 
+									+icon("")
+							.card-faq_r
+								p.fw-bold=val.title
+								hr 
+								.d-flex 
+									+icon("")
+									p=val.text
+								
+
+
+
+		section.sixth 
+			.container 
+				h2.fs-35.text-center WHAT OUR CLIENTS<br> ARE SAYING
+				hr.line-gold.mx-auto.my-25
+				.slider 
+					.slide 
+						.slide-avatar
+
+
