@@ -11,10 +11,16 @@
     box-shadow: $shadow
     max-width: 540px
     margin-left: auto
+    .form
+        display: none 
 
 .form
-    display: none 
+    background-color: $bg-white
     padding: 30px 0 0
+    max-width: 540px
+    margin-left: auto
+    position: relative
+    z-index: 1
     &-container
         padding: 0 30px 40px
     &-content 
@@ -54,7 +60,7 @@
             background-color: $bg-gold
 .second 
     padding: 90px 0 100px
-    background: #fafafa
+    background: $bg-white-200
     .text-justify
         text-align-last: center
 
@@ -111,12 +117,46 @@
     font-weight: 700
     color: $white
 
+.fifth 
+    padding: 90px 0
+    background-color: $bg-white-200
+
+.faq-row
+    padding-top: 40px 
+    
 .card-faq 
     width: calc(50% - 15px)
     margin-right: 30px 
     margin-bottom: 30px
     background-color: $bg-white
     box-shadow: $shadow
+    display: flex
     &:nth-child(2n+2)
         margin-right: 0
+    &_l 
+        min-height: 200px
+        border-bottom: 4px solid $gold
+    &_bl 
+        +box(65px)
+        flex-shrink: 0
+        background-color: $bg-white-200
+
+    &_r
+        padding: 0 30px 0 0
+        &-head 
+            padding: 22px 0 0 30px
+
+.sixth
+    padding: 90px 0 60px
+
+.seventh
+    background: url("../img/common/rectangle_1_4577.jpg") no-repeat center / cover 
+    padding-top: 90px
+    &-left
+        padding-top: 80px
+
+.eighth
+    background-color: #333333
+    padding: 125px 0 30px
+    margin-top: -72px
         

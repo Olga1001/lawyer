@@ -1,0 +1,25 @@
+.slider 
+    display: flex 
+    overflow: hidden
+    margin-top: 59px
+    margin-bottom: 35px
+
+.slide
+    flex-shrink: 0
+    width: 33.33%
+    padding: 15px
+
+.avatar 
+    +box(90px)
+    border-radius: 50% 
+    object-fit: cover 
+    background-color: #e6e6e6
+    margin: 0 auto 
+    display: block
+
+.arrow 
+    +box(40px)
+    &-prev
+        margin-right: 15px
+    &-next
+        margin-left: 15px

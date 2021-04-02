@@ -30,7 +30,7 @@ hr
   margin: 20px 0
 
 hr.line-gold
-  height: 5px
+  height: 4px
   background-color: $bg-gold
   width: 80px
   &_big
@@ -38,6 +38,10 @@ hr.line-gold
     margin: 50px 0
   &_small
     +box(50px,3px)
+
+.lihe-vertical
+  +box(1px,41px)
+  background-color: rgba(#e6e6e6, 0.2)
 
 .check
   +box(14px)
@@ -131,8 +135,8 @@ input, textarea
 // .w-100
 //   width: 100% 
   
-// .hidden-xy
-//   overflow: hidden
+.d-none
+  display: none
 
 .relative
   position: relative

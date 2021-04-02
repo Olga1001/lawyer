@@ -9,7 +9,7 @@ block content
 		section.first 
 			include modules/header/header
 			.container.first-container
-				.flex-wrap 
+				.d-lg-flex 
 					.w-lg-50.first-left 
 						h1.title1.c-white.mb-15 harassed by  <br> creditors?
 						p.fs-26.c-white.text-up you could be entitled <br>  to compensation.
@@ -70,6 +70,7 @@ block content
 											button.btn.mt-20.mx-auto(type="submit") Get Free Help
 									.form-bottom
 										p.c-gray.text-center Your information is confidential. We do not spam, or sell your info.
+		
 		section.second 
 			.container 
 				h2.title2.text-center Your Rights
@@ -131,7 +132,7 @@ block content
 				h2.fs-35.text-center QUESTIONS YOU<br> COULD BE ASKING 
 				hr.line-gold.mx-auto.my-25
 
-				.flex-wrap 
+				.flex-wrap.faq-row 
 					- 
 						faq = [
 							{
@@ -154,24 +155,113 @@ block content
 					each val in faq
 						.card-faq 
 							.card-faq_l 
-								.card-faq_b 
+								.card-faq_bl
 									+icon("")
 							.card-faq_r
-								p.fw-bold=val.title
-								hr 
+								.card-faq_r-head
+									p.fw-bold=val.title
+									hr 
 								.d-flex 
 									+icon("")
 									p=val.text
-								
-
-
 
 		section.sixth 
 			.container 
 				h2.fs-35.text-center WHAT OUR CLIENTS<br> ARE SAYING
 				hr.line-gold.mx-auto.my-25
 				.slider 
-					.slide 
-						.slide-avatar
+					- 
+						review = [
+							{
+								avatar: 'ellipse_1_4542.jpg',
+								name: 'Tony Stark',
+								text: 'Truly cares about each client. Ex'
+							},
+							{
+								avatar: 'ellipse_1_4542.jpg',
+								name: 'Andreya Snow',
+								text: 'Working with this lawyer is great! I wasn`t sure how to move forward with my lawsuit but they made it simple & easy to maintain.'
+							},
+							{
+								avatar: 'ellipse_1_4542.jpg',
+								name: 'CJ Parker',
+								text: 'Highly recommend this law firm, always available when I had any questions, from doctors to therapy was always pleasant and professional'
+							},
+							{
+								avatar: 'ellipse_1_4542.jpg',
+								name: 'CJ Parker',
+								text: 'Highly recommend this law firm, always available when I had any questions, from doctors to therapy was always pleasant and professional'
+							},
+							{
+								avatar: 'ellipse_1_4542.jpg',
+								name: 'CJ Parker',
+								text: 'Highly recommend this law firm, always available when I had any questions, from doctors to therapy was always pleasant and professional'
+							}
+
+						]
+					each val in review
+						.slide 
+							img.avatar(src="img/common/"+val.avatar, alt=val.name)
+							hr.line-gold.line-gold_small.my-30.mx-auto
+							.text-center
+								p.fw-bold=val.name
+								+icon("quotes","my-15 mx-auto")
+								p=val.text
+				.flex-center-center 
+					button.arrow.arrow-prev(type="button")
+						+icon("") 
+					p.align-items-center 
+						span 01  
+						span.c-gray-100.mr-3 /
+						span.c-gold 03
+
+					button.arrow.arrow-next(type="button")
+						+icon("")
+		section.seventh 
+			.container 
+				.d-lg-flex
+					.w-lg-50.seventh-left
+						h2.title2.c-white.fs-60.mb-20 Legal help <br>that’s free <br>for you 
+						p.fs-26.c-white.text-up.mb-20 Just a phone call away <br> what do you have to lose?
+						.d-flex
+							+icon("phone")
+							p.fs-40.c-gold.fw-bold 800-604-0466
+					.w-lg-50
+					
+						form.form
+							.form-container
+								p.fs-30.fw-bold.text-up.mb-10 Be in touch!
+									span.d-block.c-gold FREE consultation
+								p.fs-20.fw-bold Please fill out your contact information.
+								.form-content
+									.relative.pt-11 
+										input(type="text" value="" required)
+										p.name Name
+										+icon("","icon-input")
+									.relative.pt-11  
+										input(type="text" value="" required)
+										p.name Phone
+										+icon("","icon-input")
+
+									.relative.pt-11 
+										input(type="email" value="" required)
+										p.name Email
+										+icon("","icon-input")
+
+									.relative.pt-11 
+										textarea(cols="5", rows="2" value="" required)
+										p.name.name-textarea Message
+										p.count-word 0/200
+									button.btn.mt-20.mx-auto(type="submit") Get Free Help
+							.form-bottom
+								p.c-gray.text-center Your information is confidential. We do not spam, or sell your info.
+		section.eighth 
+			.container 
+				.d-lg-flex 
+					.w-lg-50.pr-lg-15.text-justify 
+						p.c-white.fs-14.mb-20 "Domaine" is not a lawyer or law firm. This website is attorney advertising: prior results do not guarantee a similar outcome. The website is operated by Results Marketing for Consumer Attorneys LLP. It is an advertising service paid for by the lawyers and advocates whose names are provided in response to user requests and it is not an attorney referral service.
+					.w-lg-50.pl-lg-15.text-justify 
+						p.c-white.fs-14.mb-20 By requesting a free evaluation, the user will be provided with the name of an independent lawyer or advocate who will contact the user to do the evaluation. Do not assume that you are entitled to any compensation as a result of your debt collector harassment. Compensation, and any results obtained, depends upon the specific factual and legal circumstances of each case. By submitting a free evaluation, I acknowledge that I understand and agree to the disclaimer and privacy policy.
+
 
 
