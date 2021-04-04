@@ -6,46 +6,10 @@
  
 
 @media only screen and (min-width : 576px)
-    // .flex-sm-center-between 
-    //     +d-flex(space-between,center)
-    // .d-sm-inline
-    //     display: inline
-    // .d-sm-none
-    //     display: none
-    // .d-sm-block
-    //     display: block
-    // .ml-sm-30
-    //     margin-left: 30px
-    // .align-items-sm-center
-    //     display: flex 
-    //     align-items: center
-    // .mb-sm-0
-    //     margin-top: 0
-
-@media only screen and (min-width : 768px)   
-    // .burger 
-    //     display: none
-    // .d-md-block 
-    //     display: block
-    // .d-md-none
-    //     display: none
-    // .d-md-flex 
-    //     display: flex
-    // .btns 
-    //     display: flex
-    //     justify-content: flex-end
-    //     flex-direction: row
-    //     width: 50%
-    // .ml-md-20 
-    //     margin-left: 20px
-    // .justify-md-content-between
-    //     display: flex
-    //     justify-content: space-between
-
+    .flex-sm-row
+        flex-direction: row
 
 @media only screen and (min-width : 992px)
-    // .d-lg-none 
-    //     display: none
     .d-lg-block
         display: block
     .d-lg-flex 
@@ -58,10 +22,41 @@
         padding-left: 15px
 
 @media only screen and (max-width : 991px)
+    .burger
+        display: block
     .container 
         max-width: 570px
-    .navmenu, .logo-name
+    .logo-name
         display: none 
+    .navmenu
+        position: fixed 
+        top: 0 
+        right: 0 
+        height: 100% 
+        width: 100% 
+        z-index: 8
+        background-color: rgba(#000,0.7)
+        opacity: 0 
+        pointer-events: none
+        transition: all 0.3s ease
+        &.active 
+            opacity: 1 
+            pointer-events: auto 
+            .menu 
+                transform: translateX(0)
+
+    .menu 
+        display: block 
+        width: 75%
+        padding: 90px 15px
+        margin-left: auto
+        background-color: $bg-gold
+        height: 100%
+        transform: translateX(100px)
+        transition: all 0.3s ease
+        overflow-y: auto
+    .menu-link
+        margin: 20px 10px
     .first-left
         padding-top: 0
         margin: 0 auto
@@ -92,11 +87,19 @@
     h1, .title1
         font-size: 40px
         line-height: 40px
+    h2, .title2
+        font-size: 24px
     .fs-26
         font-size: 22px
         line-height: 24px
+    .fs-35
+        font-size: 26px
+        line-height: 26px
     .fs-40
         font-size: 29px
+    .fs-60 
+        font-size: 40px
+        line-height: 40px
     .tab
         padding: 20px 15px
     .tab:before
@@ -110,7 +113,33 @@
     .fs-20
         font-size: 14px
         line-height: 20px
-
-
-    
-  
+    .card img
+        height: 61vw
+    .item
+        padding: 0
+        margin-right: 10px 
+        width: calc(50% - 5px)
+        &:nth-child(2n+2)
+            margin-right: 0
+    .card-content 
+        padding: 30px 15px 35px
+    .card-faq_bl
+        +box(50px)
+        svg 
+            width: 26px
+    .card-faq_r
+        padding-right: 10px
+    .card-faq_r-head
+        padding-top: 20px 
+        padding-left: 10px
+    .footer .line-vertical
+        transform: rotate(90deg)
+    .btn-phone 
+        background-color: transparent
+        span 
+            display: none
+        svg 
+            margin-right: 0
+            fill: $white
+            
+ 

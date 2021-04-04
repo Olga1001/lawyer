@@ -32,10 +32,10 @@
     flex-shrink: 0
     z-index: 9
     background: #F7F7F7
-    border-radius: 50%
     display: none
+    margin-left: 15px
     &-line
-        background-color: green
+        background-color: $gold
         +centerX
         +box(18px,2px)
         transition: all 0.3s ease
@@ -47,6 +47,9 @@
         &-bottom
             bottom: 18px
     &.active 
+        position: fixed
+        top: 20px 
+        right: 15px
         .burger-line-top
             top: 50% 
             transform: translate(-50%,-50%) rotate(227deg)

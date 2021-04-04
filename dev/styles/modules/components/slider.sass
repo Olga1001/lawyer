@@ -19,7 +19,14 @@
 
 .arrow 
     +box(40px)
+    svg
+        fill: #b3b3b3
+        transition: all 0.3s ease
+        +box(100%)
     &-prev
         margin-right: 15px
+        transform: scaleX(-1)
     &-next
         margin-left: 15px
+    &:hover svg 
+        fill: $gold

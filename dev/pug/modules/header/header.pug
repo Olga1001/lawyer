@@ -2,7 +2,7 @@ header.header
     .container 
         .flex-center-between
             a.logo(href="#") 
-                img.logo-icon(src="img/logo/", alt="icon logo")
+                img.logo-icon(src="img/logo/logo-icon.png", alt="icon logo")
                 span.logo-name personal 
                     span.d-block Lawyer
 
@@ -12,9 +12,14 @@ header.header
                     each val in ['Your Rights','How It Works ','FAQ','Reviews','Contact Us']
                         li.menu-item 
                             a.menu-link(href="#")=val
-            a.btn-phone(href="tel:2031234567") 
-                +icon("")
-                span 
-                    span.btn-phone_text CALL NOW
-                    span.btn-phone_number 203-123-4567
+            .align-items-center
+                a.btn-phone(href="tel:2031234567") 
+                    +icon("")
+                    span 
+                        span.btn-phone_text CALL NOW
+                        span.btn-phone_number 203-123-4567
+                button.burger 
+                    span.burger-line.burger-line-top
+                    span.burger-line.burger-line-center
+                    span.burger-line.burger-line-bottom
 

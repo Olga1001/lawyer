@@ -15,7 +15,7 @@ block content
 						p.fs-26.c-white.text-up you could be entitled <br>  to compensation.
 						hr.line-gold.line-gold_big
 						.d-flex.pt-15 
-							+icon("", "c-gold mr-20")
+							+icon("phone", "c-gold mr-20 wh-42")
 							.text-up 
 								p.fw-bold.fs-26.c-white.mb-15 call for free <br> legal advice now:
 								p.fw-bold.fs-40.c-gold 800-604-0466
@@ -41,7 +41,7 @@ block content
 												span=val
 										hr.mb-40
 										a.btn.mx-auto(href="#") Get Free Help
-											+icon("")
+											+icon("arrow")
 
 								form.form
 									.form-container
@@ -83,7 +83,7 @@ block content
 				h2.title2.text-center Examples of <br> Illegal Harassment
 				hr.line-gold.mx-auto
 				.flex-wrap.items
-					each val in [{icon: '', text: 'Multiple calls per week'},{icon: '', text: 'Attempts to collect more than you owe'},{icon: '', text: 'Criminal accusations'},{icon: '', text: 'Early morning or late night calls'},{icon: '', text: 'Threats of negative credit reporting'},{icon: '', text: 'Collection agency lies'},{icon: '', text: 'Calls to friends, neighbors, or coworkers'},{icon: '', text: 'Collection calls at work'},{icon: '', text: 'Use of obscene language'},{icon: '', text: 'Threats of violence, lawsuit, or arrest'},{icon: '', text: 'Attempts to intimidate you'},{icon: '', text: 'Robocalls to your cell phone'}]
+					each val in [{icon: 'phone-call', text: 'Multiple calls per week'},{icon: 'coins', text: 'Attempts to collect more than you owe'},{icon: 'robber', text: 'Criminal accusations'},{icon: 'night', text: 'Early morning or late night calls'},{icon: '', text: 'Threats of negative credit reporting'},{icon: 'telephone', text: 'Collection agency lies'},{icon: '', text: 'Calls to friends, neighbors, or coworkers'},{icon: '', text: 'Collection calls at work'},{icon: 'profanity', text: 'Use of obscene language'},{icon: '', text: 'Threats of violence, lawsuit, or arrest'},{icon: 'scared', text: 'Attempts to intimidate you'},{icon: '', text: 'Robocalls to your cell phone'}]
 						.item 
 							+icon(val.icon,"mx-auto")
 							hr.line-gold.line-gold_small.mx-auto
@@ -156,13 +156,13 @@ block content
 						.card-faq 
 							.card-faq_l 
 								.card-faq_bl
-									+icon("")
+									+icon("question")
 							.card-faq_r
 								.card-faq_r-head
 									p.fw-bold=val.title
 									hr 
 								.d-flex 
-									+icon("")
+									+icon("check")
 									p=val.text
 
 		section.sixth 
@@ -205,18 +205,18 @@ block content
 							hr.line-gold.line-gold_small.my-30.mx-auto
 							.text-center
 								p.fw-bold=val.name
-								+icon("quotes","my-15 mx-auto")
+								+icon("quote","my-15 mx-auto")
 								p=val.text
 				.flex-center-center 
 					button.arrow.arrow-prev(type="button")
-						+icon("") 
+						+icon("right-arrow") 
 					p.align-items-center 
 						span 01  
 						span.c-gray-100.mr-3 /
 						span.c-gold 03
 
 					button.arrow.arrow-next(type="button")
-						+icon("")
+						+icon("right-arrow")
 		section.seventh 
 			.container 
 				.d-lg-flex
