@@ -1,5 +1,5 @@
 # Страницы
-
+- http://m99935yr.beget.tech/lawyer/
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
