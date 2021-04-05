@@ -48,8 +48,13 @@ hr.line-gold
   border: 1px solid $white-100
   border-radius: 2px
   display: block
-  background: $bg-white no-repeat center / 93%
+  background: $bg-white
   margin-right: 10px
+  flex-shrink: 0
+  svg 
+    +box(78%, 100%)
+    display: block
+    margin: 0 auto
 
 .checkbox
   display: none 
@@ -76,7 +81,6 @@ hr.line-gold
   font-weight: 400
   color: $gray
   transition: all 0.3s ease
-  &-textarea 
 
 .icon-input
   position: absolute
