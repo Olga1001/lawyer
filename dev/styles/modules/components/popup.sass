@@ -1,0 +1,63 @@
+.popup 
+    position: fixed 
+    left: 0 
+    top: 0
+    display: inline-flex 
+    width: 100% 
+    height: 100vh 
+    overflow-y: auto 
+    background-color: rgba(#000,0.5)
+    z-index: 9
+    opacity: 0
+    pointer-events: none
+    transition: all 0.3s ease
+    &.active 
+        opacity: 1
+        pointer-events: auto
+    &-container 
+        margin: auto
+        max-width: 540px 
+        width: 100%
+        padding: 35px 30px
+        background-color: $bg-white
+        position: relative
+    &-text 
+        font-size: 18px
+        line-height: 24px
+        font-weight: 500
+        color: #333333
+        margin-top: 45px
+        text-align: center
+        padding-bottom: 10px 
+    img
+        margin: 45px auto
+
+.close 
+    position: absolute
+    right: 10px 
+    top: 10px
+    +box(30px)
+    &:before, &:after 
+        content: ''
+        +centerXY
+        +box(20px,1px)
+        background-color: #333333
+    &:before
+        transform: translate(-50%,-50%) rotate(45deg)
+    &:after 
+        transform: translate(-50%,-50%) rotate(-45deg)
+
+@media screen and ( max-width: 575px )
+    .popup img
+        height: 100px
+    .popup-container
+        padding: 35px 15px
+        h2
+            font-size: 21px
+
+    .close 
+        right: 0
+        top: 0
+    .popup-text
+        font-size: 14px
+    
