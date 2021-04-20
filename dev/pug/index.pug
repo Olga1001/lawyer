@@ -54,20 +54,24 @@ block content
 												input(type="text" value="" required)
 												p.name Name
 												+icon("user","icon-input")
+												.error-message is required.
 											.relative.pt-11  
 												input(type="text" value="" required)
 												p.name Phone
 												+icon("phone","icon-input")
+												.error-message is required.
 
 											.relative.pt-11 
 												input(type="email" value="" required)
 												p.name Email
 												+icon("mail","icon-input")
+												.error-message is required.
 
 											.relative.pt-11 
 												textarea(cols="5", rows="2" value="" required)
 												p.name Message
 												p.count-word 0/200
+												.error-message is required.
 											button.btn.mt-20.mx-auto(type="submit") Get Free Help
 									.form-bottom
 										p.c-gray.text-center Your information is confidential. We do not spam, or sell your info.
